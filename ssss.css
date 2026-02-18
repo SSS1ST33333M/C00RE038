@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Consolas';       /* Имя шрифта, которым будешь пользоваться */
+    src: url('consolas.ttf') format('ttf'),
+}
+
+body {
+    font-family: 'Consolas';
+    color: rgb(223, 46, 46);
+}

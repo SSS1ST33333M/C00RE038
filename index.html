@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Control Center</title>
+</head>
+<body>
+    <h3>SYSTEM STATUS: ACTIVE</h3>
+    <h3>PROTOCOL ZERO STATUS: ACTIVE</h3>
+    <h3>ERROR CODE: 0x535953</h3>
+    <h3>SUBJECT COUNT: 7</h3>
+    <h3>ANOMALY: DETECTED</h3>
+    <h3>CPU TEMPERATURE: LIMIT EXCEED</h3>
+    <h3>GPU TEMPERATURE: LIMIT EXCEED</h3>
+    <h3>FATAL ERROR</h3>
+    <h3 id="loading">INITALIZING PROTOCOL ZERO...</h3>
+</body>
+<style>
+    @font-face {
+    font-family: 'Consolas';       /* Имя шрифта, которым будешь пользоваться */
+    src: url('consolas.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    body {
+        font-family: Consolas;
+        background-color: rgb(2, 2, 2);
+    }
+
+    h3 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        color:rgba(255, 255, 255, 0.24);
+        font-size: 15px;
+    }
+</style>
+<script>
+    const p = document.getElementById('loading');
+    let dots = 0;
+
+    setInterval(() => {
+        dots = (dots + 1) % 4; // 0,1,2
+        p.textContent = 'INITALIZING PROTOCOL ZERO' + '.'.repeat(dots); 
+}, 500);
+</script>
+</html>
